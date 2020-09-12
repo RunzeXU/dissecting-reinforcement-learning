@@ -52,6 +52,7 @@ class MultiArmedBandit:
             raise Exception("MULTI ARMED BANDIT][ERROR] the action" + str(action) + " is out of range, total actions: " + str(len(self.reward_probability_list)))
         p = self.reward_probability_list[action]
         q = 1.0-p
-        return np.random.choice(2, p=[q, p])
+        return np.random.choice(2, p=[q, p])#a= 2,from range 0 to 2-1, random select. p =The probability of sampling each element in A
+     
 
 
